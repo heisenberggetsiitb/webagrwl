@@ -7,3 +7,36 @@
 @media(max-width:800px){.wrap{width:min(100% - 36px,620px)}.site-header{height:72px}.nav{gap:18px}.header-link{display:none}.hero{min-height:620px;align-items:flex-start}.hero-copy{width:100%;padding:65px 0 80px}.hero h1{font-size:clamp(38px,9vw,57px);letter-spacing:-2.7px}.hero-sub{max-width:390px}.hero-art{top:230px;right:-25%;width:100%;height:390px;opacity:.6}.hero-quote{top:54%;right:12%;font-size:11px}.hero-index{bottom:14px}.principles-strip>div{padding:20px 12px;grid-template-columns:1fr;gap:5px}.principles-strip>div:first-child{padding-left:0}.strip-num{grid-row:auto}.principles-strip strong{font-size:11px}.principles-strip small{font-size:10px}.section{padding-block:75px}.about-section{grid-template-columns:1fr;gap:25px}.about-body{padding-top:0}.heading-inline{align-items:start;flex-direction:column;gap:20px}.principle-grid{grid-template-columns:repeat(2,1fr)}.principle-card:nth-child(2){border-right:0}.principle-card:nth-child(-n+2){border-bottom:1px solid var(--line)}.notes-grid{grid-template-columns:1fr}.note{min-height:170px}.contact-inner{padding-block:55px;align-items:flex-start;flex-direction:column}.site-footer{grid-template-columns:1fr auto}.site-footer>span{display:none}.site-footer small{grid-column:1/-1}}
 @media(max-width:520px){.wrap{width:calc(100% - 32px)}.menu-toggle{display:flex;flex-direction:column;gap:5px;padding:8px}.menu-toggle span{width:20px;height:1px;background:var(--text)}.nav{display:none;position:absolute;top:65px;left:0;right:0;flex-direction:column;gap:0;padding:8px;background:#081015;border:1px solid var(--line);border-radius:7px}.nav.open{display:flex}.nav a{padding:12px;border-bottom:1px solid var(--line)}.nav a:last-child{border:0}.hero{min-height:635px}.hero-copy{padding-top:52px}.hero h1{font-size:39px;line-height:1.12}.hero-sub{font-size:13px;max-width:320px}.hero-art{top:315px;right:-36%;width:130%;height:300px}.hero-quote{top:48%;right:18%;font-size:10px}.hero-index{font-size:8px}.principles-strip>div{padding:16px 8px}.principles-strip strong{font-size:10px}.principles-strip small{font-size:9px}.section-heading h2,.contact-inner h2{font-size:35px}.principle-grid{grid-template-columns:1fr}.principle-card{min-height:0;border-right:0;border-bottom:1px solid var(--line)!important;padding:22px}.principle-card:last-child{border-bottom:0!important}.card-icon{margin-bottom:15px}.site-footer .back-top{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Fix mobile text overflow */
+html,
+body {
+  max-width: 100%;
+}
+
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 520px) {
+  .hero-art {
+    right: 0;
+    width: 100%;
+  }
+
+  .hero-quote {
+    left: 8%;
+    right: auto;
+    max-width: 78%;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero h1,
+  .section-heading h2,
+  .contact-inner h2,
+  .note h3,
+  .principle-card h3 {
+    overflow-wrap: anywhere;
+  }
+}
