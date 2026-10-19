@@ -40,3 +40,26 @@ body {
     overflow-wrap: anywhere;
   }
 }
+
+/* Mobile hero spacing fix */
+@media (max-width: 520px) {
+  .hero-quote {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0 24px;
+    font-size: 10px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-quote,
+  .hero-quote * {
+    box-sizing: border-box;
+  }
+}
+
